@@ -1,0 +1,188 @@
+In Linux the shell (or terminal) is the lifeline of the developer, and of any power user. Things which can be done on
+the GUI (by clicking on different buttons), can be done much more efficiently on the terminal by using commands.
+Maybe one can not remember all the commands, but with regular usage one can easily remember the most useful ones.
+
+
+///////////////1ST CHAPTER(Shell Commands)////////////////////////////////
+
+1. [username@hostname directoryname]
+
+username - suhail
+@hostname - suhailroushan
+directoryname - /home/suhail/
+
+2. date command
+date 
+date - u : for yesterday's date
+
+3.calender command
+cal : shows the calendar
+cal 2019
+cal 2022 
+
+4.whoami command
+whoami - Tells you which user account you are using
+
+5.id command
+id : id prints real user id, and various other details related to the account
+
+6.pwd command 
+pwd : pwd command, short for print working directory, will help you to find 
+out the absolute path of the current directory
+
+7.cd command
+cd :  cd, short for change directory. This command will help you to change your current
+directory. We will move to /tmp directory in our example.
+
+8.cd .. command
+The above command changes the current directory to the parent directory.
+
+9. ls command
+ls : ls command to list the files and directories inside any given directory. 
+If you use ls command without any argument, then it will work on the current directory. 
+
+10.mkdir command
+We can create new directories using mkdir command.
+mkdir suhailroushan
+
+11.rm command is used to remove a file, or directory. The -r option is being used to remove in a recursive way. With -f
+you force the removal, ignoring errors and never prompt. You can chain the flags, so instead of rm -r -f you can as
+well type rm -rf. But, always double check before you use rm -rf command, if you by mistake give this command in
+your home directory, or any other important directory, it will not ask to confirm, but it will delete everything there. So,
+please be careful and read twice before pressing enter key.
+
+rm -rf hello.txt
+rm -rf Folder 
+
+12. cp command 
+We use the cp command to copy a file in the Linux shell. To copy a folder with its contents recursively use the cp
+command with the -r flag. We use the cp file_to_copy new_location format. In the example below, we are copying the
+hello.txt to hello2.txt.
+
+cp 1.txt 2.txt 
+
+If there is a alternative path then provide the absolute path to it with
+
+-r is use for recursively copying the files 
+
+
+cp -r hello.txt /home/suhail/Work
+
+
+
+13.The mv command is used to rename or move a file or directory.
+In the following example, the file hello.txt is renamed
+to nothello.txt.
+
+mv hello.txt bye.txt // Renaming the file hello.txt to bye.txt
+mv hello.txt /home/suhail/Work // Move the file to /home/suhail/Work
+
+14. tree command
+tree command prints the directory structure in a nice visual tree design way
+tree
+
+15. wc command
+wc, short for word count, is an useful command which can help us to count newlines, words and bytes of a fil
+wc -l file.txt : length of the file
+wc -w file.txt : word count of the file
+
+16 echo : echo command echoes any given string to the display
+echo "Hello World!"
+------Displays -------
+Hello World
+
+17 | pipe command 
+In Linux shells, we can redirect the command output to a file, or as input to another command. The pipe operator | is
+the most common way to do so. Using this we can now count the number of directories in the root (/) directory very
+easily.
+
+
+ls | wc -w |
+It redirect the output to the next command
+
+
+18. > and >>
+cat command is used for to display the files 
+---------  > command ---------------------
+echo "Hello" > hello.txt 
+cat hello.txt
+Hello
+echo "World" > hello.txt
+cat hello.txt
+World
+
+The > means it updates and deletes the old ones.
+First we added Hello and we did again World
+When we checked hello.txt the Hello was gone and updates the new data 
+
+-------------- >> command ----------------------
+echo "Hello" > hello.txt 
+cat hello.txt
+Hello
+echo "World" > hello.txt
+cat hello.txt
+Hello
+World
+
+The >> means it updates and does not deletes the old ones.
+First we added Hello and we did again World
+When we checked hello.txt the Hello was not gone and updates the new data 
+it stores the old data and updates the new data
+
+
+19. Shortcut Keys in Linux
+Key combination Action
+Ctrl + A Move to the beginning of the line
+Ctrl + E Move to the end of the line
+Alt + B Move to the previous word
+Alt + F Move to the next word
+Ctrl + U Cuts to the beginning of the line
+Ctrl + K Cuts to the end of the line
+Ctrl + W Cuts the previous word
+Ctrl + P Browse previously entered commands
+Ctrl + R Reverse search for previously entered commands
+Ctrl + Y Pastes the text in buffer
+
+20. man commands
+man shows the system’s manual pages. This is the command we use to view the help document (manual page) for
+any command. The man pages are organized based on sections, and if the same command is found in many different
+sections, only the first one is shown.
+
+man ls : it shows how to use ls command 
+man cd : it shows how to use cd command
+man pwd : it shows how to use pwd command
+
+21. Counting files in a directory
+
+ls | wc -l
+
+22. To Open Editor 
+Press Ctrl+X and then Ctrl + E To Open the  New editor without opening the older file ..it opens the new editor for new files and
+---------------Or to edit existing files--------------------------------
+sudo nano file.txt 
+if i have suhail.txt and i want to edit the file with
+sudo nano file.txt
+
+
+
+/////////////////////// 2ND CHAPTER FHS /////////////////////////
+/ is the root directory of your file system. It’s under this directory, that all the other files and directories reside. There’s a
+Filesystem Hierarchy Standard(FHS), which talks about these different directories, and what kinds of files are located
+in which directory.
+
+
+cd /
+
+
+
+
+
+
+
+
+
+
+
+
+
+
